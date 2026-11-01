@@ -1,0 +1,84 @@
+ 
+===== Bat dau 20261031 120558 ===== 
+^C 
+===== Bat dau 20261031 120813 ===== 
+Crawl category 1591 - 2026-10-31 12:08
+  trang 1: 40 dong, 40 moi (tong 40)
+  trang 2: 40 dong, 40 moi (tong 80)
+  trang 3: 40 dong, 40 moi (tong 120)
+  trang 4: 40 dong, 40 moi (tong 160)
+  trang 5: 40 dong, 40 moi (tong 200)
+  trang 6: 40 dong, 40 moi (tong 240)
+  trang 7: 40 dong, 40 moi (tong 280)
+  trang 8: 40 dong, 40 moi (tong 320)
+  trang 9: 40 dong, 40 moi (tong 360)
+  trang 10: 40 dong, 40 moi (tong 400)
+  trang 11: 40 dong, 40 moi (tong 440)
+  trang 12: 40 dong, 40 moi (tong 480)
+  trang 13: 40 dong, 40 moi (tong 520)
+  trang 14: 39 dong, 39 moi (tong 559)
+  trang 15: 40 dong, 40 moi (tong 599)
+  trang 16: 40 dong, 40 moi (tong 639)
+  trang 17: 40 dong, 40 moi (tong 679)
+  trang 18: 40 dong, 40 moi (tong 719)
+  trang 19: 40 dong, 40 moi (tong 759)
+  trang 20: 40 dong, 40 moi (tong 799)
+  trang 21: 40 dong, 40 moi (tong 839)
+  trang 22: 40 dong, 40 moi (tong 879)
+  trang 23: 4 dong, 4 moi (tong 883)
+
+  883 san pham -> data\tiki_1591_20261031.csv
+  JSON tho          -> data\raw\tiki_1591_20261031.json
+  So nguoi ban      : 106
+  So thuong hieu    : 161
+  Gia trung vi      : 233,000 d
+===== Xong =====                      
+ 
+===== Bat dau 20261031 122048 ===== 
+Crawl category 1591 - 2026-10-31 12:20
+  trang 1: 40 dong, 40 moi (tong 40)
+  trang 2: 40 dong, 40 moi (tong 80)
+  trang 3: 40 dong, 40 moi (tong 120)
+  trang 4: 40 dong, 40 moi (tong 160)
+  trang 5: 40 dong, 40 moi (tong 200)
+  trang 6: 40 dong, 40 moi (tong 240)
+  trang 7: 40 dong, 40 moi (tong 280)
+  trang 8: 40 dong, 40 moi (tong 320)
+  trang 9: 40 dong, 40 moi (tong 360)
+  trang 10: 40 dong, 40 moi (tong 400)
+  trang 11: 40 dong, 40 moi (tong 440)
+  trang 12: 40 dong, 40 moi (tong 480)
+  trang 13: 40 dong, 40 moi (tong 520)
+  trang 14: 39 dong, 39 moi (tong 559)
+  trang 15: 40 dong, 40 moi (tong 599)
+  trang 16: 40 dong, 40 moi (tong 639)
+  trang 17: 40 dong, 40 moi (tong 679)
+  trang 18: 40 dong, 40 moi (tong 719)
+  trang 19: 40 dong, 40 moi (tong 759)
+  trang 20: 40 dong, 40 moi (tong 799)
+  trang 21: 40 dong, 40 moi (tong 839)
+  trang 22: 40 dong, 40 moi (tong 879)
+  trang 23: 4 dong, 4 moi (tong 883)
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Documents\Tiki project\crawl_tiki.py", line 230, in <module>
+    main()
+  File "C:\Users\Lenovo\Documents\Tiki project\crawl_tiki.py", line 226, in main
+    crawl(cat)
+  File "C:\Users\Lenovo\Documents\Tiki project\crawl_tiki.py", line 204, in crawl
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig")
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\generic.py", line 3989, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'data\\tiki_1591_20261031.csv'
+===== LOI, ma thoat 1 ===== 
