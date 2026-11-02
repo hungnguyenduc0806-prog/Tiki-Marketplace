@@ -1,16 +1,3 @@
-"""
-Do CSV da parse vao bang prices trong PostgreSQL.
-
-Cach dung (tu thu muc goc):
-    python -m src.load                      # do file cua hom nay
-    python -m src.load 20261031             # do mot ngay cu the
-    python -m src.load --all                # do lai toan bo thu muc processed
-
-Ghi theo kieu UPSERT: khoa chinh la (product_id, crawled_date), nen chay lai
-cung mot ngay khong tao dong trung - chi cap nhat gia tri moi. Day goi la
-idempotent, va no la ly do script nay chay lai bao nhieu lan cung an toan.
-"""
-
 import sys
 from datetime import datetime
 
@@ -46,7 +33,6 @@ def load_csv(path) -> int:
     df = pd.read_csv(path)
     df["crawled_date"] = pd.to_datetime(df["crawled_at"]).dt.date
 
-    # Mot san pham chi duoc xuat hien mot lan trong mot ngay
     df = df.drop_duplicates(subset=["product_id", "crawled_date"], keep="last")
 
     df = df.reindex(columns=COLUMNS)
@@ -71,11 +57,11 @@ def main():
     tong = 0
     for f in files:
         if not f.exists():
-            print(f"  khong thay {f}")
+            print(f"Can't find {f}")
             continue
         tong += load_csv(f)
 
-    print(f"Tong cong {tong} dong vao bang prices")
+    print(f"Total:{tong} rows inserted/updated into Postgres")
 
 
 if __name__ == "__main__":
